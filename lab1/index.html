@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Application</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js"></script>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <link rel="stylesheet" href="./node_modules/mocha/mocha.css"/>
+    <script src="./node_modules/mocha/mocha.js"></script>
+    <script src="./node_modules/chai/chai.js"></script>
+    <script src="./node_modules/sinon/pkg/sinon.js"></script>
+    <script>mocha.setup('bdd');</script>
+</head>
+
+<body>
+
+<form id="search">
+    <input type="text" id="search-txt" placeholder="Enter City Name">
+    <button type="submit">Find</button>
+</form>
+
+<div id="result">
+
+</div>
+
+
+<script src="main.js"></script>
+<script id="textTemplateTrue" type="text/x-handlebars-template">
+    <div>City Name: {{cityName}}</div>
+    <div>Weather: {{weather}}</div>
+    <div>Temperature: {{temp}}</div>
+    <div>Humidity: {{hum}}</div>
+    <div>Wind: {{windSpd}}</div>
+</script>
+<script id="textTemplateErr" type="text/x-handlebars-template">
+    <div>{{reason}}</div>
+</script>
+<script src="test/tests.js"></script>
+<div id="mocha"></div>
+<script>mocha.run();</script>
+</body>
+</html>

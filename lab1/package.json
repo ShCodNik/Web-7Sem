@@ -1,0 +1,22 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "connect": "^3.7.0",
+    "less": "^3.10.3",
+    "mocha": "^6.2.2",
+    "mocha-headless-chrome": "^2.0.3",
+    "serve-static": "^1.14.1",
+    "sinon": "^8.1.1",
+    "sion": "0.0.1"
+  },
+  "scripts": {
+    "test": "mocha-headless-chrome -f ./index.html",
+    "start": "node server.js"
+  }
+}

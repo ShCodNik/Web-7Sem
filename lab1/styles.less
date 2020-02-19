@@ -1,0 +1,23 @@
+/* Переменные */
+@text-color: #0033ff;
+@button-bg-color: yellow;
+/* LESS CSS */
+html {
+  color: @text-color;
+  text-align: center;
+}
+#result
+{
+  font-family: sans-serif;
+  color: @text-color;
+  font-size: xx-large;
+}
+button {
+  background-color: white;
+  border: 1px solid @button-bg-color;
+  border-radius: 35px;
+  font-style: italic;
+}
+button:hover {
+  background-color: desaturate(@button-bg-color, 50%);
+}
